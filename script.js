@@ -126,17 +126,20 @@ let upperCasedCharacters = [
 ///console.log("This is a random uppercased character" +randomUpperCasedCharacter);
 
 
-// Function to prompt user for password options
+// Function to prompt user for password options\
+alert("Welcome to the Random Password Generator!");
+let myCharactersAnswer = prompt("How many characters would you like your password to be (please choose a number between 10 and 64 characters)?"); 
+  console.log(myCharactersAnswer);
+alert("Your password must contain at least one character type");
+let doYouSpecialCharacters = confirm("Would you like to add special characters?");
+let doYouNumericCharacters = confirm("Would you like to add numeric characters?")
+let doYouLowerCasedCharacters = confirm("Would you like to add lowercase characters?");
+let doYouUpperCasedCharacters = confirm("Would you like to add uppercase characters?");
+alert("Click the red button to generate your password")
 function getPasswordOptions() {
-  alert("Welcome to the Random Password Generator!");
-}
+ 
   // This is created from user entering how many characters they want in the password from the prompt
-  let myCharacters = 0;
-  let answer = prompt("How many characters would you like your password to be (please choose a number between 10 and 64 characters)?"); 
-  console.log(answer);
-  if (answer = true) {
-  prompt ("Would you like lowercase characters as part of your password?")
-}
+  
 
 // Function for getting a random element from an array
 
