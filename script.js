@@ -92,27 +92,28 @@ let upperCasedCharacters = [
 
 // Function to prompt user for password options
 //Welcome alert
-//alert("Welcome to the Random Password Generator!");
+alert("Welcome to the Random Password Generator!");
 //User specifies how many characters they would like in their password 
-//let myCharactersAnswer = prompt("How many characters would you like your password to be (please choose a number between 10 and 64 characters)?"); 
- // console.log(myCharactersAnswer);
+let myCharactersAnswer = prompt("How many characters would you like your password to be (please choose a number between 10 and 64 characters)?"); 
+ console.log(myCharactersAnswer);
 //Alert to let user know they must select at least one character type
-//alert("Your password must contain at least one character type");
+alert("Your password must contain at least one character type");
 //Asking user to confirm if they would like to add special characters
-//let doYouSpecialCharacters = confirm("Would you like to add special characters?");
-//console.log(doYouSpecialCharacters);
+let doYouSpecialCharacters = confirm("Would you like to add special characters?");
+console.log(doYouSpecialCharacters);
 // Asking user to confirm if they would like to add numeric characters
-//let doYouNumericCharacters = confirm("Would you like to add numeric characters?")
-//console.log(doYouNumericCharacters);
+let doYouNumericCharacters = confirm("Would you like to add numeric characters?")
+console.log(doYouNumericCharacters);
 // Asking user to confirm if they would like to add lowercase characters
-//let doYouLowerCasedCharacters = confirm("Would you like to add lowercase characters?");
-//console.log(doYouLowerCasedCharacters);
+let doYouLowerCasedCharacters = confirm("Would you like to add lowercase characters?");
+console.log(doYouLowerCasedCharacters);
 // Asking user to confirm if they would like to add uppercase characters
-//let doYouUpperCasedCharacters = confirm("Would you like to add uppercase characters?");
-//console.log(doYouUpperCasedCharacters)
+let doYouUpperCasedCharacters = confirm("Would you like to add uppercase characters?");
+console.log(doYouUpperCasedCharacters)
 //Alert user to press the red button to generate their password
-//alert("Click the red button to generate your password")
-//function getPasswordOptions() {
+alert("Click the red button to generate your password")
+
+function getPasswordOptions() {
  
   // This is created from user entering how many characters they want in the password from the prompt
   
@@ -128,20 +129,22 @@ console.log(randomCharacter)
 
 // Function to generate password with user input
 function generatePassword() {
-let password 
+  let password = [];
+  for (let i = 0; i <= myCharactersAnswer; i++) {
+    if (doYouSpecialCharacters === true &&
+    doYouNumericCharacters === true &&
+    doYouLowerCasedCharacters === true && 
+    doYouUpperCasedCharacters === true); //??????
+  }
+  if (doYouSpecialCharacters === false && 
+    doYouNumericCharacters === false &&
+    doYouLowerCasedCharacters === false &&
+    doYouUpperCasedCharacters === false ) {
+      alert ("Please try again and ensure you select a character type");
+    };
 
- ///let password = "";
-  ///for (let i = 0; i <= myCharacters; i++) {
 
- // }
-  ///for (let i = 0; (i <= 64)+10; i++) {
-    //password where users select all characters and numbers
-//return password += (randomSpecialCharacter + randomNumber + randomLowerCasedCharacter + randomUpperCasedCharacter)*answer
-  //}
-  /// password += [randomSpecialCharacter, randomNumber, randomLowerCasedCharacter, randomUpperCasedCharacter]*answer;
-  /// return password
-  /// console.log(password)
-  ///}
+
   //password where users only selects lowercase characters
     //let password2 = lowerCasedCharacters;
   //password where users only selects uppercase characters
@@ -172,16 +175,15 @@ let password
 
 
 // Get references to the #generate element
-///let generateBtn = document.querySelector('#generate');
+let generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
-///function writePassword() {
-  ///let password = generatePassword();
- /// let passwordText = document.querySelector('#password');
+function writePassword() {
+let password = generatePassword();
+ let passwordText = document.querySelector('#password');
 
- ///passwordText.value = password;
+ } passwordText.value = password;
 
 
 // Add event listener to generate button
-///generateBtn.addEventListener('click', writePassword);
-///}
+generateBtn.addEventListener('click', writePassword);
