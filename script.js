@@ -1,7 +1,6 @@
 
 
 // Array of special characters to be included in password
-let arr = ""
 let specialCharacters = [
   '@',
   '%',
@@ -28,18 +27,18 @@ let specialCharacters = [
   '.'
 ];
 // Function expression to generate a random special character
-let randomSpecialCharacter = Math.floor(Math.random*specialCharacters.length)
-specialCharacters[randomSpecialCharacter]
-console.log(randomSpecialCharacter)
+let randomSpecialCharacter = Math.floor(Math.random*specialCharacters.length);
+specialCharacters[randomSpecialCharacter];
+console.log("This is a random special character" + randomSpecialCharacter);
 
 
 // Array of numeric characters to be included in password
 let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Function expression to generate a random number
-let randomNumber = Math.floor(Math.random*numericCharacters.length)
-numericCharacters[randomNumber]
-console.log(randomNumber)
+let randomNumber = Math.floor(Math.random*numericCharacters.length);
+numericCharacters[randomNumber];
+console.log("This is a random number" +randomNumber);
 
 // Array of lowercase characters to be included in password
 let lowerCasedCharacters = [
@@ -71,9 +70,9 @@ let lowerCasedCharacters = [
   'z'
 ];
 // Function expression to generate a random lower cased character
-let randomLowerCasedCharacter = Math.floor(Math.random*lowerCasedCharacters.length)
-lowerCasedCharacters[randomLowerCasedCharacter]
-console.log(randomLowerCasedCharacter)
+let randomLowerCasedCharacter = Math.floor(Math.random*lowerCasedCharacters.length);
+lowerCasedCharacters[randomLowerCasedCharacter];
+console.log("This is a random lower cased character" + randomLowerCasedCharacter);
 
 // Array of uppercase characters to be included in password
 let upperCasedCharacters = [
@@ -109,12 +108,15 @@ let upperCasedCharacters = [
 
 let randomUpperCasedCharacter = Math.floor(Math.random*upperCasedCharacters.length)
 upperCasedCharacters[randomUpperCasedCharacter]
-console.log(randomUpperCasedCharacter)
+console.log("This is a random uppercased character" +randomUpperCasedCharacter)
 
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-alert ("What is the length of the password you require?")
+  let answer = prompt("How many characters would you like your password to be (please choose a number between 10 and 64 characters)?"); 
+  console.log(answer);
+  if (answer = true) {
+  prompt ("Would you like lowercase characters as part of your password?")
 }
 
 // Function for getting a random element from an array
@@ -127,9 +129,23 @@ function getRandom(arr) {
 function generatePassword() {
 
   let password = "";
-  for (let i = 0; i < 65; i++) {
-return password += randomSpecialCharacter + randomNumber + randomLowerCasedCharacter + randomUpperCasedCharacter
+  for (let i = 0; (i <= 64)+10; i++) {
+    //password where users select all characters and numbers
+return password += (randomSpecialCharacter + randomNumber + randomLowerCasedCharacter + randomUpperCasedCharacter)*answer
   }
+  //password where users only selects lowercase characters
+  //password where users only selects uppercase characters
+  //password where user only selects special characters
+  //password where user selects lowercase and uppercase characters
+  //password where user selects lowercase and numerica characters
+  //password where user selects lowercase and special characters
+  //password where user selects uppercase and numerci characters
+  //password where user selects uppercase and special characters
+  //password where user selects lowercase, uppercase and numeric characters
+  //password where user selects lowercase, uppercase and special characters
+  //password where user selects lowercase, numeric and special characters
+  //password where user selects uppercase, numeric and special characters
+  //void if user doesnts select a character type 
   
 }
 
@@ -146,5 +162,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
-let answer = prompt("How many characters would you like your password to be?"); 
-console.log(answer);
+}
