@@ -27,7 +27,7 @@ let specialCharacters = [
   '.'
 ];
 // Function expression to generate a random special character
-let randomSpecialCharacter = Math.floor(Math.random*specialCharacters.length);
+let randomSpecialCharacter = Math.floor(Math.random()*specialCharacters.length);
 specialCharacters[randomSpecialCharacter];
 console.log("This is a random special character" + randomSpecialCharacter);
 
@@ -36,7 +36,7 @@ console.log("This is a random special character" + randomSpecialCharacter);
 let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Function expression to generate a random number
-let randomNumber = Math.floor(Math.random*numericCharacters.length);
+let randomNumber = Math.floor(Math.random()*numericCharacters.length);
 numericCharacters[randomNumber];
 console.log("This is a random number" +randomNumber);
 
@@ -70,7 +70,7 @@ let lowerCasedCharacters = [
   'z'
 ];
 // Function expression to generate a random lower cased character
-let randomLowerCasedCharacter = Math.floor(Math.random*lowerCasedCharacters.length);
+let randomLowerCasedCharacter = Math.floor(Math.random()*lowerCasedCharacters.length);
 lowerCasedCharacters[randomLowerCasedCharacter];
 console.log("This is a random lower cased character" + randomLowerCasedCharacter);
 
@@ -106,9 +106,9 @@ let upperCasedCharacters = [
 
 // Function expression to generate random upper cased character
 
-let randomUpperCasedCharacter = Math.floor(Math.random*upperCasedCharacters.length)
-upperCasedCharacters[randomUpperCasedCharacter]
-console.log("This is a random uppercased character" +randomUpperCasedCharacter)
+let randomUpperCasedCharacter = Math.floor(Math.random()*upperCasedCharacters.length);
+upperCasedCharacters[randomUpperCasedCharacter];
+console.log("This is a random uppercased character" +randomUpperCasedCharacter);
 
 
 // Function to prompt user for password options
@@ -157,7 +157,7 @@ function writePassword() {
   let password = generatePassword();
   let passwordText = document.querySelector('#password');
 
-  passwordText.value = password;
+ passwordText.value = password;
 }
 
 // Add event listener to generate button
