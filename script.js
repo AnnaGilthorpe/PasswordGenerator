@@ -177,28 +177,54 @@ function generatePassword() {
   };
   //password where user only selects special and uppercase characters
   let password7 = {
-    howManyCharacters: myCharactersAnswer
+    howManyCharacters: myCharactersAnswer,
     structure: specialCharacters.concat(upperCasedCharacters)
-  }
-  //password where user only selects numeri
-  //password where user selects lowercase and uppercase characters
-    // let password5 = lowerCasedCharacters.concat(upperCasedCharacters);
-  //password where user selects lowercase and numeric characters
-    // let password6 = lowerCasedCharacters.concat(numericCharacters);
-  //password where user selects lowercase and special characters
-    // let password7 = lowerCasedCharacters.concat(specialCharacters);
-  //password where user selects uppercase and numeric characters
-   // let password8 = upperCasedCharacters.concat(numericCharacters);
-  //password where user selects uppercase and special characters
-    //let password9 = upperCasedCharacters.concat(specialCharacters);
-  //password where user selects lowercase, uppercase and numeric characters
-    //let password10 = lowerCasedCharacters.concat(upperCasedCharacters,numericCharacters);
+  };
+  //password where user only selects numeric and lowercase characters
+  let password8 = {
+    howManyCharacters: myCharactersAnswer,
+    structure: numericCharacters.concat(lowerCasedCharacters)
+  };
+  //password where user selects numeric and uppercase characters
+  let password9 = {
+    howManyCharacters = myCharactersAnswer,
+    structure: numericCharacters.concat(upperCasedCharacters)
+  };
+//password where user selects lowercase and uppercase characters
+    let password10 = {
+      howManyCharacters: myCharactersAnswer,
+      structure: lowerCasedCharacters.concat(upperCasedCharacters)
+    };
+ //password where user selects lowercase, uppercase and numeric characters
+    let password11 = {
+      howManyCharacters: myCharactersAnswer,
+      structure: lowerCasedCharacters.concat(upperCasedCharacters,numericCharacters)
+    };
   //password where user selects lowercase, uppercase and special characters
-  //let password11 = lowerCasedCharacters.concat(upperCasedCharacters,specialCharacters);
+  let password12 = {
+    howManyCharacter: myCharactersAnswer, 
+    structure: lowerCasedCharacters.concat(upperCasedCharacters,specialCharacters)
+  };
   //password where user selects lowercase, numeric and special characters
-    //let password12 = lowerCasedCharacters.concat(numericCharacters,specialCharacters);
+    let password13 = {
+      howManyCharacter: myCharactersAnswer,
+      structure: lowerCasedCharacters.concat(numericCharacters,specialCharacters)
+    };
   //password where user selects uppercase, numeric and special characters
- // letpassword13 = upperCasedCharacters.concat(numericCharacters,specialCharacters);
+ letpassword14 = {
+  howManyCharacter: myCharactersAnswer,
+  structure: upperCasedCharacters.concat(numericCharacters,specialCharacters)
+ };
+ //password where user selects numeric, uppercase and lowercase characters
+ let password15 = {
+  howManyCharacter:myCharactersAnswer,
+  structure: numericCharacters.concat(upperCasedCharacters,specialCharacters)
+ };
+ //password where user selects all characters
+ let password16 = {
+  howManyCharacter: myCharactersAnswer,
+  structure: specialCharacters.concat(numericCharacters,lowerCasedCharacters,upperCasedCharacters)
+ };
   //void if user doesnts select a character type 
   // if user 'cancels - false' all characters types THEN return "Please try again and ensure you select a character type"
   
