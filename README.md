@@ -19,7 +19,7 @@ The finer details of what I have learnt include:-
 
 Technologies used:- MAC Terminal, VS Code and Git Hub.
 
-[Click here] (https://annagilthorpe.github.io/Challenge4-Console-Finance/)
+[Click here] (https://annagilthorpe.github.io/Challenge5-Password-Generator/)
 
 Installation
 N/A
@@ -27,4 +27,4 @@ N/A
  
 Usage
 Users can access the answers via the console
- ![Screenshot](/Images/Challenge4screenshot.png)
+ ![Screenshot](/Images/PasswordGeneratorScreenshot.png)
