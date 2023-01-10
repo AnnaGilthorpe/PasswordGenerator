@@ -89,144 +89,54 @@ let upperCasedCharacters = [
   'Y',
   'Z'
 ];
+let passwordLength = 0;
+let userChoice = [];
+let result = "";
 
-// Function to prompt user for password options
-//Welcome alert
-alert("Welcome to the Random Password Generator!");
-//User specifies how many characters they would like in their password 
-let myCharactersAnswer = prompt("How many characters would you like your password to be (please choose a number between 10 and 64 characters)?"); 
- console.log(myCharactersAnswer);
-//Alert to let user know they must select at least one character type
-alert("Your password must contain at least one character type");
-//Asking user to confirm if they would like to add special characters
-let doYouSpecialCharacters = confirm("Would you like to add special characters?");
-console.log(doYouSpecialCharacters);
-// Asking user to confirm if they would like to add numeric characters
-let doYouNumericCharacters = confirm("Would you like to add numeric characters?")
-console.log(doYouNumericCharacters);
-// Asking user to confirm if they would like to add lowercase characters
-let doYouLowerCasedCharacters = confirm("Would you like to add lowercase characters?");
-console.log(doYouLowerCasedCharacters);
-// Asking user to confirm if they would like to add uppercase characters
-let doYouUpperCasedCharacters = confirm("Would you like to add uppercase characters?");
-console.log(doYouUpperCasedCharacters)
-//Alert user to press the red button to generate their password
-alert("Click the red button to generate your password")
 
-function getPasswordOptions() {
+// function getPasswordOptions() {
  
-  // This is created from user entering how many characters they want in the password from the prompt
+//}
   
 
-// Function for getting a random element from an array
-function getRandom(arr) {
-  let randomCharacterIndex = Math.floor(Math.random()*arr.length); 
-  let randomCharacter = arr[randomCharacterIndex];
-return randomCharacter;
-console.log(randomCharacter)
-}
+// // Function for getting a random element from an array
+// function getRandom(arr) {
 
+// }
 
 // Function to generate password with user input
 function generatePassword() {
-  let password = [];
-  for (let i = 0; i <= myCharactersAnswer; i++) {
-    if (doYouSpecialCharacters === true &&
-    doYouNumericCharacters === true &&
-    doYouLowerCasedCharacters === true && 
-    doYouUpperCasedCharacters === true); //??????
+  while (passwordLength < 10 || passwordLength > 64 || passwordLength === "" || isNaN (passwordLength)){
+    passwordLength = prompt ("How many characters would you like your password to be (please choose a number between 10 and 64 characters)?");
   }
-  if (doYouSpecialCharacters === false && 
-    doYouNumericCharacters === false &&
-    doYouLowerCasedCharacters === false &&
-    doYouUpperCasedCharacters === false ) {
-      alert ("Please try again and ensure you select a character type");
-    };
-
-
- //password where user only selects special characters
-    let password1 = {
-      howManyCharacters: myCharactersAnswer,
-      structure: specialCharacters
-    };
-  //password where user only selects numeric characters
-  let password2 = {
-    howManyCharacters: myCharactersAnswer,
-    structure: numericCharacters
-  };
-  //password where users only selects lowercase characters
-      let password3 = {
-        howManyCharacters: myCharactersAnswer,
-        stucture: lowerCasedCharacters
-      };
-  //password where users only selects uppercase characters
-    let password4 = {
-      howManyCharacters: myCharactersAnswer,
-      structure: upperCasedCharacters
-    };
- //password where user only selects special and numeric characters
-  let password5 = {
-    howManyCharacters: myCharactersAnswer,
-    structure: specialCharacters.concat(numericCharacters)
-  };
-
-  //password where user only selects special and lowercase characters
-  let password6 = {
-    howManyCharacters: myCharactersAnswer,
-    structure: specialCharacters.concat(lowerCasedCharacters)
-  };
-  //password where user only selects special and uppercase characters
-  let password7 = {
-    howManyCharacters: myCharactersAnswer,
-    structure: specialCharacters.concat(upperCasedCharacters)
-  };
-  //password where user only selects numeric and lowercase characters
-  let password8 = {
-    howManyCharacters: myCharactersAnswer,
-    structure: numericCharacters.concat(lowerCasedCharacters)
-  };
-  //password where user selects numeric and uppercase characters
-  let password9 = {
-    howManyCharacters = myCharactersAnswer,
-    structure: numericCharacters.concat(upperCasedCharacters)
-  };
-//password where user selects lowercase and uppercase characters
-    let password10 = {
-      howManyCharacters: myCharactersAnswer,
-      structure: lowerCasedCharacters.concat(upperCasedCharacters)
-    };
- //password where user selects lowercase, uppercase and numeric characters
-    let password11 = {
-      howManyCharacters: myCharactersAnswer,
-      structure: lowerCasedCharacters.concat(upperCasedCharacters,numericCharacters)
-    };
-  //password where user selects lowercase, uppercase and special characters
-  let password12 = {
-    howManyCharacter: myCharactersAnswer, 
-    structure: lowerCasedCharacters.concat(upperCasedCharacters,specialCharacters)
-  };
-  //password where user selects lowercase, numeric and special characters
-    let password13 = {
-      howManyCharacter: myCharactersAnswer,
-      structure: lowerCasedCharacters.concat(numericCharacters,specialCharacters)
-    };
-  //password where user selects uppercase, numeric and special characters
- letpassword14 = {
-  howManyCharacter: myCharactersAnswer,
-  structure: upperCasedCharacters.concat(numericCharacters,specialCharacters)
+  const doYouSpecialCharacters = confirm("Would you like to add special characters?");
+  const doYouNumericCharacters = confirm("Would you like to add numeric characters?");
+  const doYouLowerCasedCharacters = confirm("Would you like to add lowercase characters?");
+  const doYouUpperCasedCharacters = confirm("Would you like to add uppercase characters?");
+if (doYouSpecialCharacters === true) {
+  userChoice = userChoice.concat (specialCharacters)
+}
+if (doYouNumericCharacters === true) {
+  userChoice = userChoice.concat (numericCharacters)
+}
+if (doYouLowerCasedCharacters === true) {
+  userChoice = userChoice.concat (lowerCasedCharacters)
+}
+if (doYouUpperCasedCharacters === true) {
+  userChoice = userChoice.concat (upperCasedCharacters)
+}
+if (doYouSpecialCharacters === false && doYouNumericCharacters === false && doYouLowerCasedCharacters === false && doYouUpperCasedCharacters === false) {
+  alert("Please try again and ensure you select at least one character type")
+  window.location.reload()
+}
+console.log(userChoice);
+for(let i = 0; i < parseInt(passwordLength); i++) {
+  result += userChoice [Math.floor(Math.random()*userChoice.length)]
+  console.log(result);
+}
+return result
  };
- //password where user selects numeric, uppercase and lowercase characters
- let password15 = {
-  howManyCharacter:myCharactersAnswer,
-  structure: numericCharacters.concat(upperCasedCharacters,specialCharacters)
- };
- //password where user selects all characters
- let password16 = {
-  howManyCharacter: myCharactersAnswer,
-  structure: specialCharacters.concat(numericCharacters,lowerCasedCharacters,upperCasedCharacters)
- };
-  //void if user doesnts select a character type 
-  // if user 'cancels - false' all characters types THEN return "Please try again and ensure you select a character type"
+
   
 
 
@@ -236,9 +146,11 @@ let generateBtn = document.querySelector('#generate');
 // Write password to the #password input
 function writePassword() {
 let password = generatePassword();
+console.log(password);
  let passwordText = document.querySelector('#password');
 
- } passwordText.value = password;
+  passwordText.value = password;
+};
 
 
 // Add event listener to generate button
