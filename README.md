@@ -28,3 +28,10 @@ N/A
 Usage
 Users can access the answers via the console
  ![Screenshot](/Images/PasswordGeneratorScreenshot.png)
+ ![Screenshot](/Images/PasswordGeneratorScreenshot2.png)
+ ![Screenshot](/Images/PasswordGeneratorScreenshot3.png)
+ ![Screenshot](/Images/PasswordGeneratorScreenshot4.png)
+ ![Screenshot](/Images/PasswordGeneratorScreenshot5.png)
+ ![Screenshot](/Images/PasswordGeneratorScreenshot6.png)
+ ![Screenshot](/Images/PasswordGeneratorScreenshot7.png)
+ ![Screenshot](/Images/PasswordGeneratorScreenshot8.png)
