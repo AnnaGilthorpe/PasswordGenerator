@@ -144,13 +144,43 @@ function generatePassword() {
     };
 
 
-
+ //password where user only selects special characters
+    let password1 = {
+      howManyCharacters: myCharactersAnswer,
+      structure: specialCharacters
+    };
+  //password where user only selects numeric characters
+  let password2 = {
+    howManyCharacters: myCharactersAnswer,
+    structure: numericCharacters
+  };
   //password where users only selects lowercase characters
-    //let password2 = lowerCasedCharacters;
+      let password3 = {
+        howManyCharacters: myCharactersAnswer,
+        stucture: lowerCasedCharacters
+      };
   //password where users only selects uppercase characters
-    // let password3 = upperCasedCharacters;
-  //password where user only selects special characters
-    // let password4 = specialCharacters;
+    let password4 = {
+      howManyCharacters: myCharactersAnswer,
+      structure: upperCasedCharacters
+    };
+ //password where user only selects special and numeric characters
+  let password5 = {
+    howManyCharacters: myCharactersAnswer,
+    structure: specialCharacters.concat(numericCharacters)
+  };
+
+  //password where user only selects special and lowercase characters
+  let password6 = {
+    howManyCharacters: myCharactersAnswer,
+    structure: specialCharacters.concat(lowerCasedCharacters)
+  };
+  //password where user only selects special and uppercase characters
+  let password7 = {
+    howManyCharacters: myCharactersAnswer
+    structure: specialCharacters.concat(upperCasedCharacters)
+  }
+  //password where user only selects numeri
   //password where user selects lowercase and uppercase characters
     // let password5 = lowerCasedCharacters.concat(upperCasedCharacters);
   //password where user selects lowercase and numeric characters
